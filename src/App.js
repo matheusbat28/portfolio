@@ -75,22 +75,16 @@ function App() {
           <div className="w-80 md:w-1/2 text-gray-700 dark:text-gray-300 flex items-center flex-col gap-4 pt-5">
             <h3 className="text-2xl  text-center">Sobre mim</h3>
             <p className="text-left lg:text-justify">
-              Desde pequeno a minha paixão sempre foi a tecnologia. O meu primeiro contato nessa área foi a partir da linguagem de programação Java, e
-              foi a partir dessa experiência que eu passei cada vez mais me interessar por esse mundo digital. Sempre sonhei em cursar Análise de
-              Desenvolvimento de Sistema e em 2020 pude realizar esse sonho estudando no Senac (Serviço Nacional de Aprendizagem Comercial),
-              onde estou lá até os dias atuais. Durante o meu tempo no curso técnico, fiz e faço vários cursos na Udemy,
-              também sou formado em Python Full Stack e Java Desktop. Atualmente trabalho com python (django), entretanto,
-              nas horas vagas eu uso&nbsp;
-              <a href="https://www.hostinger.com.br/tutoriais/o-que-e-html-conceitos-basicos" className="hover:text-cor-html">HTML</a>,
-              <a href="https://www.hostinger.com.br/tutoriais/o-que-e-css-guia-basico-de-css/" className="hover:text-cor-css"> CSS</a>,&nbsp;
-              <a href="https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps/What_is_JavaScript" className="hover:text-cor-js">JS</a> e&nbsp;
-              <a href="https://kenzie.com.br/blog/o-que-e-python/?utm_source=adwords&utm_campaign=TRAFFIC-DIST-BLOG-SEARCH&utm_term=python&utm_medium=google-ads&hsa_cam=20546388451&hsa_grp=160211981424&hsa_ad=673611232726&gad_source=1&gclid=CjwKCAiA04arBhAkEiwAuNOsIpLPSveKDIoyzC6JAJvUf5Ms164gWoMDyTm-UCrdc46ZQEf-SRKkIhoCkksQAvD_BwE" className="hover:text-cor-python">PYTHON</a>
-              &nbsp;com a framework&nbsp;
-              <a href="https://www.hostinger.com.br/tutoriais/o-que-e-react-javascript" className="hover:text-cor-react">REACT</a>,&nbsp;
-              <a href="https://www.alura.com.br/artigos/react-native?utm_term=&utm_campaign=&utm_source=adwords&utm_medium=ppc&hsa_acc=7964138385&hsa_cam=20802484994&hsa_grp=162793339904&hsa_ad=682182591269&hsa_src=g&hsa_tgt=dsa-2258482178843&hsa_kw=&hsa_mt=&hsa_net=adwords&hsa_ver=3&gad_source=1&gclid=CjwKCAiA04arBhAkEiwAuNOsIh5uHE_zobFkblm_ExJzWgS71nhioCc3iEG6XJVui1qlVcW-9CpXthoCpoAQAvD_BwE" className="hover:text-cor-react-native">REACT NATIVE</a>,&nbsp;
-              <a href="https://kenzie.com.br/blog/django/" className="hover:text-cor-django">DJANGO</a>,&nbsp;
-              <a href="https://www.treinaweb.com.br/blog/o-que-e-o-django-rest-framework" className='hover:text-cor-django-rest'>DJANGO REST</a>.
+              Desde a infância, minha paixão sempre foi a tecnologia. Meu primeiro contato com essa área foi por meio da
+              linguagem de programação Java, uma experiência que despertou meu interesse crescente pelo mundo digital.
+              Sempre sonhei em cursar Análise de Desenvolvimento de Sistemas, e em 2020, pude realizar esse sonho estudando
+              no Senac (Serviço Nacional de Aprendizagem Comercial), onde permaneço até hoje. Durante meu tempo no curso
+              técnico, realizei e continuo realizando diversos cursos na Udemy. Sou formado em Python Full Stack e Java
+              Desktop. Atualmente, trabalho com Python (Django). Nas horas vagas, utilizo também HTML, CSS, JavaScript
+              e Python com o framework React, React Native, Django e Django Rest. Além disso, continuo buscando aprimorar
+              meus conhecimentos e habilidades na área, sempre em constante evolução.
             </p>
+
             <div className="md:mt-3 md:w-1/2 flex items-center justify-center flex-col md:flex-row gap-4">
               <img height="180em" src="https://github-readme-stats.vercel.app/api?username=matheusbat28&show_icons=true&theme=dark&include_all_commits=true&count_private=true" alt="github stats" />
               <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=matheusbat28&layout=compact&langs_count=7&theme=dark" alt="github languages" />
