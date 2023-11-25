@@ -92,8 +92,8 @@ function App() {
               <a href="https://www.treinaweb.com.br/blog/o-que-e-o-django-rest-framework" className='hover:text-cor-django-rest'>DJANGO REST</a>.
             </p>
             <div className="md:mt-3 md:w-1/2 flex items-center justify-center flex-col md:flex-row gap-4">
-              <img height="180em" src="https://github-readme-stats.vercel.app/api?username=matheusbat28&show_icons=true&theme=dark&include_all_commits=true&count_private=true" />
-              <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=matheusbat28&layout=compact&langs_count=7&theme=dark" />
+              <img height="180em" src="https://github-readme-stats.vercel.app/api?username=matheusbat28&show_icons=true&theme=dark&include_all_commits=true&count_private=true" alt="github stats" />
+              <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=matheusbat28&layout=compact&langs_count=7&theme=dark" alt="github languages" />
             </div>
           </div>
           <div className="absolute sm:flex gap-3 items-center justify-center flex-col hidden p-4 bg-slate-900 dark:bg-white top-12 right-3 rounded-md shadow-lg text-white dark:text-slate-800">
