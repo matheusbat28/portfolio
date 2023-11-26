@@ -1,11 +1,15 @@
 import React, { useEffect } from 'react';
-import { FaGithub, FaLinkedin, FaBook } from "react-icons/fa6";
+import { FaGithub, FaLinkedin, FaBook, FaDocker } from "react-icons/fa6";
 import { FaCode, FaArrowAltCircleUp } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
-import { SiGmail, SiDjango, SiReact, SiPython, SiJavascript, SiHtml5, SiCss3, SiTailwindcss, SiBootstrap, SiLinux } from "react-icons/si";
+import { SiGmail, SiDjango, SiReact, SiPython, SiJavascript, SiHtml5, SiCss3, SiTailwindcss, SiBootstrap, SiLinux, SiUdemy } from "react-icons/si";
 import { PiNewspaperFill } from "react-icons/pi";
 import { IoSchoolSharp } from "react-icons/io5";
+import { TbBrandVscode } from "react-icons/tb";
 import { DiMysql } from "react-icons/di";
+import { SiPowerbi, SiPowershell } from "react-icons/si";
+import { BiLogoFigma } from "react-icons/bi";
+import { TbBrandMysql } from "react-icons/tb";
 import me from './assets/img/me.png';
 
 function App() {
@@ -69,9 +73,7 @@ function App() {
         </div>
       </header>
       <section id="about" className="h-full w-full bg-white dark:bg-slate-900 relative">
-        <div className="h-full flex items-center justify-center">
-        </div>
-        <div className="h-full w-full absolute top-0 left-0 flex justify-center">
+        <div className="h-full w-full absolute top-0 left-0 flex justify-center overflow-auto">
           <div className="w-80 md:w-1/2 text-gray-700 dark:text-gray-300 flex items-center flex-col gap-4 pt-5">
             <h3 className="text-2xl  text-center">Sobre mim</h3>
             <p className="text-left lg:text-justify">
@@ -86,8 +88,8 @@ function App() {
             </p>
 
             <div className="md:mt-3 md:w-1/2 flex items-center justify-center flex-col md:flex-row gap-4">
-              <img height="180em" src="https://github-readme-stats.vercel.app/api?username=matheusbat28&show_icons=true&theme=dark&include_all_commits=true&count_private=true" alt="github stats" />
-              <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=matheusbat28&layout=compact&langs_count=7&theme=dark" alt="github languages" />
+              <img src="https://github-readme-stats.vercel.app/api?username=matheusbat28&show_icons=true&theme=dark&include_all_commits=true&count_private=true" alt="github stats" />
+              <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=matheusbat28&layout=compact&langs_count=7&theme=dark" alt="github languages" />
             </div>
           </div>
           <div className="absolute sm:flex gap-3 items-center justify-center flex-col hidden p-4 bg-slate-900 dark:bg-white top-12 right-3 rounded-md shadow-lg text-white dark:text-slate-800">
@@ -104,7 +106,70 @@ function App() {
           </div>
         </div>
       </section>
-      <section id="training" className="h-full w-full bg-white dark:bg-slate-900"></section>
+      <section id="training" className="h-full w-full bg-white dark:bg-slate-900 relative">
+        <div className="h-auto w-full flex justify-center items-center flex-col pt-5 absolute gap-4">
+          <h3 className="text-2xl text-gray-700 dark:text-gray-300">Formação</h3>
+          <div className="w-80 md:w-1/2 h-full text-gray-700 dark:text-white grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="flex flex-col items-center justify-center gap-2 h-56 border-slate-900 border-2 dark:border-white shadow-md rounded transition-transform relative">
+              <img src="https://udemy-certificate.s3.amazonaws.com/image/UC-c053ea03-551f-4aea-a307-1134a9c89726.jpg?v=1660151733000" alt="udemy" className="w-full h-full relative" />
+              <SiUdemy className="absolute bottom-3 right-3 text-2xl text-cor-udemy transform hover:scale-110 transition-transform" />
+            </div>
+            <div className="flex flex-col items-center justify-center gap-2 h-56 border-slate-900 border-2 dark:border-white shadow-md rounded transition-transform relative">
+              <img src="https://udemy-certificate.s3.amazonaws.com/image/UC-bce54539-42b8-45c3-a939-102c32d20938.jpg?v=1683831116000" alt="udemy" className="w-full h-full relative" />
+              <SiUdemy className="absolute bottom-3 right-3 text-2xl text-cor-udemy transform hover:scale-110 transition-transform" />
+            </div>
+            <div className="flex flex-col items-center justify-center gap-2 h-56 border-slate-900 border-2 dark:border-white shadow-md rounded transition-transform relative">
+              <img src="https://udemy-certificate.s3.amazonaws.com/image/UC-865fee0a-b505-4b44-850e-32c98fc5158f.jpg?v=1700971973000" alt="udemy" className="w-full h-full relative" />
+              <SiUdemy className="absolute bottom-3 right-3 text-2xl text-cor-udemy transform hover:scale-110 transition-transform" />
+            </div>
+          </div>
+        </div>
+        <div className="absolute sm:flex gap-3 items-center justify-center flex-col hidden w-36 p-3 bg-slate-900 dark:bg-white top-12 left-3 rounded-md shadow-lg ">
+          <h2 className="text-md text-left w-full text-white dark:text-slate-800">Feramentas:</h2>
+          <div className='w-full'>
+            <TbBrandVscode className="text-2xl mb-2 text-cor-vscode" title="vscode" />
+            <div className="w-full h-2 bg-gray-200 rounded-full dark:bg-gray-700">
+              <div className="bg-cor-vscode h-2 text-sm font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style={{ width: '85%' }}></div>
+            </div>
+          </div>
+          <div className='w-full'>
+            <SiPowerbi className="text-2xl mb-2 text-cor-powerbi" title="powerbi" />
+            <div className="w-full h-2 bg-gray-200 rounded-full dark:bg-gray-700">
+              <div className="bg-cor-powerbi h-2 text-sm font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style={{ width: '70%' }}></div>
+            </div>
+          </div>
+          <div className='w-full'>
+            <TbBrandMysql className="text-2xl mb-2 text-cor-mysql" title="mysql" />
+            <div className="w-full h-2 bg-gray-200 rounded-full dark:bg-gray-700">
+              <div className="bg-cor-mysql h-2 text-sm font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style={{ width: '75%' }}></div>
+            </div>
+          </div>
+          <div className='w-full'>
+            <BiLogoFigma className="text-2xl mb-2 text-cor-figma" title="figma" />
+            <div className="w-full h-2 bg-gray-200 rounded-full dark:bg-gray-700">
+              <div className="bg-cor-figma h-2 text-sm font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style={{ width: '65%' }}></div>
+            </div>
+          </div>
+          <div className='w-full'>
+            <FaDocker className="text-2xl mb-2 text-cor-docker" title="docker" />
+            <div className="w-full h-2 bg-gray-200 rounded-full dark:bg-gray-700">
+              <div className="bg-cor-docker h-2 text-sm font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style={{ width: '70%' }}></div>
+            </div>
+          </div>
+          <div className='w-full'>
+            <FaGithub className="text-2xl mb-2 text-gray-700 dark:text-cor-github" title="github" />
+            <div className="w-full h-2 bg-gray-200 rounded-full dark:bg-gray-700">
+              <div className="bg-gray-700 dark:bg-cor-github h-2 text-sm font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style={{ width: '80%' }}></div>
+            </div>
+          </div>
+          <div className='w-full'>
+            <SiPowershell className="text-2xl mb-2 text-cor-powershell" title="powershell" />
+            <div className="w-full h-2 bg-gray-200 rounded-full dark:bg-gray-700">
+              <div className="bg-cor-powershell h-2 text-sm font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style={{ width: '50%' }}></div>
+            </div>
+          </div>
+        </div>
+      </section>
       <section id="code" className="h-full w-full bg-white dark:bg-slate-900"></section>
       <footer className="w-full h-12 fixed bottom-3 sm:hidden flex items-center justify-center">
         <div className="h-full p-6 flex items-center justify-center gap-6 dark:bg-white rounded-lg bg-gray-800">
