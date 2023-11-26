@@ -73,7 +73,7 @@ function App() {
         </div>
       </header>
       <section id="about" className="h-full w-full bg-white dark:bg-slate-900 relative">
-        <div className="h-full w-full absolute top-0 left-0 flex justify-center overflow-auto">
+        <div className="h-full w-full absolute top-0 left-0 flex justify-center">
           <div className="w-80 md:w-1/2 text-gray-700 dark:text-gray-300 flex items-center flex-col gap-4 pt-5">
             <h3 className="text-2xl  text-center">Sobre mim</h3>
             <p className="text-left lg:text-justify">
@@ -87,9 +87,9 @@ function App() {
               meus conhecimentos e habilidades na área, sempre em constante evolução.
             </p>
 
-            <div className="md:mt-3 md:w-1/2 flex items-center justify-center flex-col md:flex-row gap-4">
-              <img src="https://github-readme-stats.vercel.app/api?username=matheusbat28&show_icons=true&theme=dark&include_all_commits=true&count_private=true" alt="github stats" />
-              <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=matheusbat28&layout=compact&langs_count=7&theme=dark" alt="github languages" />
+            <div className="md:mt-3 md:w-full flex items-center justify-center flex-col md:flex-row gap-4 overflow-auto md:overflow-hidden">
+              <img className="mt-24 md:mt-0 md:w-7/12" src="https://github-readme-stats.vercel.app/api?username=matheusbat28&show_icons=true&theme=dark&include_all_commits=true&count_private=true" alt="github stats" />
+              <img className="md:w-7/12" src="https://github-readme-stats.vercel.app/api/top-langs/?username=matheusbat28&layout=compact&langs_count=7&theme=dark" alt="github languages" />
             </div>
           </div>
           <div className="absolute sm:flex gap-3 items-center justify-center flex-col hidden p-4 bg-slate-900 dark:bg-white top-12 right-3 rounded-md shadow-lg text-white dark:text-slate-800">
@@ -170,7 +170,11 @@ function App() {
           </div>
         </div>
       </section>
-      <section id="code" className="h-full w-full bg-white dark:bg-slate-900"></section>
+      <section id="code" className="h-full w-full bg-white dark:bg-slate-900 relative">
+        <div className="h-auto w-full flex justify-center items-center flex-col pt-5 absolute gap-4">
+          <h3 className="text-2xl text-gray-700 dark:text-gray-300">Projetos</h3>
+        </div>
+      </section>
       <footer className="w-full h-12 fixed bottom-3 sm:hidden flex items-center justify-center">
         <div className="h-full p-6 flex items-center justify-center gap-6 dark:bg-white rounded-lg bg-gray-800">
           <a href="#about">
