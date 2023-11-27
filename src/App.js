@@ -177,7 +177,7 @@ function App() {
         </div>
       </section>
       <section id="code" className="h-full w-full bg-white dark:bg-slate-900 relative">
-        <div className="h-auto w-full flex justify-center items-center flex-col pt-10 absolute gap-4 bg-white dark:bg-slate-900">
+        <div className="h-auto w-full flex justify-center items-center flex-col pt-5 absolute gap-4 bg-white dark:bg-slate-900">
           <h3 className="text-2xl text-gray-700 dark:text-gray-300">Projetos</h3>
           <div className="w-80 md:w-1/2 h-full text-gray-700 dark:text-white grid grid-cols-1 lg:grid-cols-2 gap-4 bg-white dark:bg-slate-900 mb-24 md:mb-0">
             <div className="flex flex-col items-center justify-center gap-2 h-60 border-slate-900 border-2 dark:border-white shadow-md rounded transition-transform relative" onMouseEnter={() => setIsHoverSF(true)} onMouseLeave={() => setIsHoverSF(false)}>
