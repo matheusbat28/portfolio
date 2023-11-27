@@ -79,8 +79,8 @@ function App() {
         </div>
       </header>
       <section id="about" className="h-full w-full bg-white dark:bg-slate-900 relative">
-        <div className="h-full w-full absolute top-0 left-0 flex justify-center">
-          <div className="w-80 md:w-1/2 text-gray-700 dark:text-gray-300 flex items-center flex-col gap-4 pt-5">
+        <div className="h-full w-full absolute top-0 left-0 flex justify-center bg-white dark:bg-slate-900">
+          <div className="w-80 md:w-1/2 text-gray-700 dark:text-gray-300 flex items-center flex-col gap-4 pt-5 bg-white dark:bg-slate-900">
             <h3 className="text-2xl  text-center">Sobre mim</h3>
             <p className="text-left lg:text-justify max-h-80 overflow-auto">
               Desde a infância, minha paixão sempre foi a tecnologia. Meu primeiro contato com essa área foi por meio da
@@ -113,9 +113,9 @@ function App() {
         </div>
       </section>
       <section id="training" className="h-full w-full bg-white dark:bg-slate-900 relative">
-        <div className="h-auto w-full flex justify-center items-center flex-col pt-5 absolute gap-4">
+        <div className="h-auto w-full flex justify-center items-center flex-col pt-5 absolute gap-4 bg-white dark:bg-slate-900">
           <h3 className="text-2xl text-gray-700 dark:text-gray-300">Formação</h3>
-          <div className="w-80 md:w-1/2 h-full text-gray-700 dark:text-white grid grid-cols-1 md:grid-cols-2 gap-4 overflow-auto">
+          <div className="w-80 md:w-1/2 h-full text-gray-700 dark:text-white grid grid-cols-1 lg:grid-cols-2 gap-4 overflow-auto">
             <div className="flex flex-col items-center justify-center gap-2 h-56 border-slate-900 border-2 dark:border-white shadow-md rounded transition-transform relative">
               <img src="https://udemy-certificate.s3.amazonaws.com/image/UC-c053ea03-551f-4aea-a307-1134a9c89726.jpg?v=1660151733000" alt="udemy" className="w-full h-full relative" />
               <SiUdemy className="absolute bottom-3 right-3 text-2xl text-cor-udemy transform hover:scale-110 transition-transform" />
@@ -177,9 +177,9 @@ function App() {
         </div>
       </section>
       <section id="code" className="h-full w-full bg-white dark:bg-slate-900 relative">
-        <div className="h-auto w-full flex justify-center items-center flex-col pt-10 absolute gap-4">
+        <div className="h-auto w-full flex justify-center items-center flex-col pt-10 absolute gap-4 bg-white dark:bg-slate-900">
           <h3 className="text-2xl text-gray-700 dark:text-gray-300">Projetos</h3>
-          <div className="w-80 md:w-1/2 h-full text-gray-700 dark:text-white grid grid-cols-1 lg:grid-cols-2 gap-4">
+          <div className="w-80 md:w-1/2 h-full text-gray-700 dark:text-white grid grid-cols-1 lg:grid-cols-2 gap-4 bg-white dark:bg-slate-900 mb-24 md:mb-0">
             <div className="flex flex-col items-center justify-center gap-2 h-60 border-slate-900 border-2 dark:border-white shadow-md rounded transition-transform relative" onMouseEnter={() => setIsHoverSF(true)} onMouseLeave={() => setIsHoverSF(false)}>
               <img src={sofaLimpo} alt="github" className="w-full h-full absolute top-0" />
               {isHoverSF ? (
