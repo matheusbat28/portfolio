@@ -9,11 +9,13 @@ import { TbBrandVscode } from "react-icons/tb";
 import { DiMysql } from "react-icons/di";
 import { SiPowerbi, SiPowershell } from "react-icons/si";
 import { BiLogoFigma } from "react-icons/bi";
+import { MdQuiz } from "react-icons/md";
 import { TbBrandMysql } from "react-icons/tb";
 import me from './assets/img/me.png';
 import sofaLimpo from './assets/img/sofaLimpo.png';
 import tcs from './assets/img/tcs.png';
 import xp from './assets/img/xp.png';
+import quiz from './jsons/quiz.json';
 
 function App() {
 
@@ -24,8 +26,19 @@ function App() {
   const [isHoverTCS, setIsHoverTCS] = useState(false);
   const [isHoverXP, setIsHoverXP] = useState(false);
   const [isModalSF, setIsModalSF] = useState(false);
+  const [isModalQuiz, setIsModalQuiz] = useState(false);
+  const [question, setQuestion] = useState('');
+  const [response, setResponse] = useState('');
+  const [options, setOptions] = useState([]);
+  const [qtCorrect, setQtCorrect] = useState(0);
+  const [qtIncorrect, setQtIncorrect] = useState(0);
+  const [selectedOption, setSelectedOption] = useState('');
+  const [message, setMessage] = useState({});
+  const [isloading, setIsLoading] = useState(false);
+  const questions = quiz["perguntas"];
 
   useEffect(() => {
+    drawQuiz()
     const darkMode = localStorage.getItem('darkMode');
     if (darkMode !== 'disabled') {
       document.body.classList.add('dark');
@@ -43,12 +56,51 @@ function App() {
     }
   };
 
+  const drawQuiz = () => {
+    const random = Math.floor(Math.random() * questions.length);
+    const question = questions[random];
+    setQuestion(question["pergunta"]);
+    setResponse(question["resposta_correta"]);
+    setOptions(question["opcoes"]);
+  }
+
+  const checkAnswer = () => {
+    setIsLoading(true);
+    if (selectedOption === '') {
+      setMessage({ "message": "Selecione uma opção!", "color": "bg-yellow-700" });
+      setIsLoading(false);
+    }
+    else if (selectedOption === response) {
+      setQtCorrect(qtCorrect + 1);
+      setMessage({ "message": "Resposta correta!", "color": "bg-green-700" });
+      setIsLoading(false);
+      drawQuiz()
+
+    } else {
+      setQtIncorrect(qtIncorrect + 1);
+      setMessage({ "message": "Resposta incorreta!", "color": "bg-red-700" })
+      setIsLoading(false);
+      drawQuiz()
+    }
+
+    setTimeout(() => {
+      setMessage({})
+    }, 2000);
+  }
   const toggleKnowledge = () => {
     setKnowledge(!knowledge);
   };
 
   const handleModalSF = () => {
     setIsModalSF(!isModalSF);
+  }
+
+  const handleModalQuiz = () => {
+    setIsModalQuiz(!isModalQuiz);
+  }
+
+  const handleSelectedOption = (selectedValue) => {
+    setSelectedOption(selectedValue);
   }
 
   return (
@@ -83,8 +135,8 @@ function App() {
           </label>
         </div>
       </header>
-      <section id="about" className="h-full w-full bg-white dark:bg-slate-900 relative">
-        <div className="h-full w-full absolute top-0 left-0 flex justify-center bg-white dark:bg-slate-900">
+      <section id="about" className="h-full w-full  bg-white dark:bg-slate-900 relative">
+        <div className="h-full w-full absolute top-0 left-0 flex items-center flex-col bg-white dark:bg-slate-900">
           <div className="w-80 md:w-1/2 text-gray-700 dark:text-gray-300 flex items-center flex-col gap-4 pt-5 bg-white dark:bg-slate-900">
             <h3 className="text-2xl  text-center">Sobre mim</h3>
             <p className="text-left lg:text-justify max-h-80 overflow-auto">
@@ -97,11 +149,10 @@ function App() {
               e Python com o framework React, React Native, Django e Django Rest. Além disso, continuo buscando aprimorar
               meus conhecimentos e habilidades na área, sempre em constante evolução.
             </p>
-
-            <div className="md:mt-3 pt-20 md:p-0 md:w-full flex items-center justify-center flex-col xl:flex-row gap-4 overflow-auto md:overflow-hidden bg-white dark:bg-slate-900">
-              <img className=" md:w-7/12" src="https://github-readme-stats.vercel.app/api?username=matheusbat28&show_icons=true&theme=dark&include_all_commits=true&count_private=true" alt="github stats" />
-              <img className="md:w-7/12" src="https://github-readme-stats.vercel.app/api/top-langs/?username=matheusbat28&layout=compact&langs_count=7&theme=dark" alt="github languages" />
-            </div>
+          </div>
+          <div className="w-1/2 pt-5 md:w-full flex items-center justify-center flex-col xl:flex-row gap-4 overflow-auto md:overflow-hidden bg-white dark:bg-slate-900">
+            <img className="" src="https://github-readme-stats.vercel.app/api?username=matheusbat28&show_icons=true&theme=dark&include_all_commits=true&count_private=true" alt="github stats" />
+            <img className="" src="https://github-readme-stats.vercel.app/api/top-langs/?username=matheusbat28&layout=compact&langs_count=7&theme=dark" alt="github languages" />
           </div>
           <div className="absolute sm:flex gap-3 items-center justify-center flex-col hidden p-4 bg-slate-900 dark:bg-white top-12 right-3 rounded-md shadow-lg text-white dark:text-slate-800">
             <SiHtml5 className="text-2xl" title="html" />
@@ -203,6 +254,9 @@ function App() {
                 <img src="https://github-readme-stats.vercel.app/api/pin/?username=matheusbat28&repo=projetoxpnovo&theme=dark" alt="github" className="w-full absolute bottom-0 transition-transform" />
               ) : null}
             </div>
+            <div className="absolute sm:flex gap-3 items-center justify-center flex-col hidden p-4 bg-slate-900 dark:bg-white top-12 right-3 rounded-md shadow-lg text-white dark:text-slate-800">
+              <MdQuiz className="text-2xl cursor-pointer" title="jogo de perguntas" onClick={() => handleModalQuiz()} />
+            </div>
           </div>
         </div>
       </section>
@@ -254,6 +308,59 @@ function App() {
                 className="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600"
               >
                 Fechar
+              </button>
+            </div>
+          </div>
+        </div>
+      ) : null}
+      {isModalQuiz ? (
+        <div className="fixed top-0 left-0 w-full h-full hidden sm:flex items-center justify-center">
+          <div className="absolute w-full h-full bg-gray-800 opacity-75"></div>
+          <div className="z-50 bg-white dark:bg-slate-900 rounded-lg p-8 max-w-2xl w-full">
+            <div className="w-full flex justify-between items-center">
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 w-full">
+                Jogo de perguntas
+              </h3>
+              <div className="flex items-center justify-end gap-2">
+                <div className="w-10 h-10 bg-green-700 rounded-md flex items-center justify-center font-bold text-white" title="quantidade de acerto">
+                  {qtCorrect}
+                </div>
+                <div className="w-10 h-10 bg-red-700 rounded-md flex items-center justify-center font-bold text-white" title="quantidade de erro">
+                  {qtIncorrect}
+                </div>
+              </div>
+            </div>
+            <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400 mb-4">
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 w-full">
+                {question}
+              </h3>
+              {options.map((option, index) => (
+                <div key={index} className="flex items-center gap-2">
+                  <input
+                    type="radio"
+                    name="option"
+                    id={index}
+                    value={option}
+                    onChange={() => handleSelectedOption(option)}
+                  />
+                  <label htmlFor={index}>{option}</label>
+                </div>
+              ))}
+              {message["message"] ? (
+                <div className={`w-full h-10 ${message['color']} rounded-md flex items-center justify-center font-bold text-white`}>
+                  {message["message"]}
+                </div>
+              ) : null}
+            </p>
+            <div className="flex items-center justify-end gap-6">
+              <button
+                onClick={() => handleModalQuiz()}
+                className="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600"
+              >
+                Fechar
+              </button>
+              <button onClick={() => checkAnswer()} className="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">
+                {isloading ? ('Carregando...') : ('Responder')}
               </button>
             </div>
           </div>

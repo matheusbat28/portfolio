@@ -1,0 +1,314 @@
+{
+  "perguntas": [
+    {
+      "pergunta": "O que é programação orientada a objetos?",
+      "opcoes": [
+        "Programação procedural",
+        "Programação funcional",
+        "Programação baseada em objetos",
+        "Programação linear"
+      ],
+      "resposta_correta": "Programação baseada em objetos"
+    },
+    {
+      "pergunta": "Qual linguagem de programação é conhecida por ser usada no desenvolvimento web e é conhecida por seu design simples e fácil aprendizado?",
+      "opcoes": [
+        "Java",
+        "Python",
+        "C++",
+        "HTML"
+      ],
+      "resposta_correta": "Python"
+    },
+    {
+      "pergunta": "O que é um 'loop' em programação?",
+      "opcoes": [
+        "Uma instrução condicional",
+        "Um tipo de dado",
+        "Uma estrutura de repetição",
+        "Um operador lógico"
+      ],
+      "resposta_correta": "Uma estrutura de repetição"
+    },
+    {
+      "pergunta": "Qual é a função do CSS em desenvolvimento web?",
+      "opcoes": [
+        "Manipular dados no servidor",
+        "Estilizar elementos HTML",
+        "Realizar cálculos matemáticos",
+        "Gerenciar o banco de dados"
+      ],
+      "resposta_correta": "Estilizar elementos HTML"
+    },
+    {
+      "pergunta": "O que significa 'API' em programação?",
+      "opcoes": [
+        "Algoritmo de Programação Integrada",
+        "Application Programming Interface",
+        "Automated Program Instruction",
+        "Advanced Programming Interface"
+      ],
+      "resposta_correta": "Application Programming Interface"
+    },
+    {
+      "pergunta": "Qual é a diferença entre 'var', 'let' e 'const' em JavaScript?",
+      "opcoes": [
+        "São sinônimos e podem ser usados indistintamente",
+        "Referem-se a tipos diferentes de dados",
+        "Controlam o escopo das variáveis",
+        "São palavras reservadas em linguagens diferentes"
+      ],
+      "resposta_correta": "Controlam o escopo das variáveis"
+    },
+    {
+      "pergunta": "O que é 'version control' em desenvolvimento de software?",
+      "opcoes": [
+        "Um tipo de linguagem de programação",
+        "Um sistema para controlar e gerenciar alterações no código-fonte",
+        "Um método de otimização de código",
+        "Uma técnica de teste de software"
+      ],
+      "resposta_correta": "Um sistema para controlar e gerenciar alterações no código-fonte"
+    },
+    {
+      "pergunta": "O que é um 'framework' em programação?",
+      "opcoes": [
+        "Um ambiente de desenvolvimento integrado",
+        "Um conjunto de bibliotecas e padrões que fornecem estrutura para o desenvolvimento de software",
+        "Uma linguagem de programação específica",
+        "Um tipo de bug no código"
+      ],
+      "resposta_correta": "Um conjunto de bibliotecas e padrões que fornecem estrutura para o desenvolvimento de software"
+    },
+    {
+      "pergunta": "O que é SQL e qual é sua função?",
+      "opcoes": [
+        "Structured Query Language, usada para programação front-end",
+        "Sistema de Qualidade e Linguagem",
+        "Sintaxe de Qualificação de Linguagem",
+        "Software Query Locator"
+      ],
+      "resposta_correta": "Structured Query Language, usada para programação front-end"
+    },
+    {
+      "pergunta": "O que é um 'bug' em programação?",
+      "opcoes": [
+        "Uma característica indesejada do software",
+        "Um erro no código que causa falhas",
+        "Um método de teste de software",
+        "Um tipo de linguagem de programação"
+      ],
+      "resposta_correta": "Um erro no código que causa falhas"
+    },
+    {
+      "pergunta": "Qual é a diferença entre 'front-end' e 'back-end' em desenvolvimento web?",
+      "opcoes": [
+        "São termos intercambiáveis",
+        "Front-end refere-se à interface do usuário, enquanto back-end lida com a lógica e o armazenamento de dados",
+        "Front-end é para desenvolvimento móvel e back-end é para web",
+        "Back-end refere-se à interface do usuário, enquanto front-end lida com a lógica e o armazenamento de dados"
+      ],
+      "resposta_correta": "Front-end refere-se à interface do usuário, enquanto back-end lida com a lógica e o armazenamento de dados"
+    },
+    {
+      "pergunta": "O que é um 'loop infinito' e por que deve ser evitado?",
+      "opcoes": [
+        "Um tipo de algoritmo eficiente",
+        "Um código que nunca para de executar",
+        "Uma técnica avançada de programação",
+        "Uma estrutura de repetição de baixo desempenho"
+      ],
+      "resposta_correta": "Um código que nunca para de executar"
+    },
+    {
+      "pergunta": "O que é 'debugging' em programação?",
+      "opcoes": [
+        "Um processo de encontrar e corrigir erros no código",
+        "Uma linguagem de programação específica",
+        "Uma técnica de otimização de código",
+        "Um tipo de estrutura de controle"
+      ],
+      "resposta_correta": "Um processo de encontrar e corrigir erros no código"
+    },
+    {
+      "pergunta": "Qual é a diferença entre 'compilação' e 'interpretação'?",
+      "opcoes": [
+        "São sinônimos e podem ser usados indistintamente",
+        "Compilação refere-se à tradução do código-fonte para código executável, enquanto interpretação é a execução direta do código-fonte",
+        "Compilação é usado apenas em linguagens de baixo nível",
+        "Interpretação é usado apenas em linguagens de alto nível"
+      ],
+      "resposta_correta": "Compilação refere-se à tradução do código-fonte para código executável, enquanto interpretação é a execução direta do código-fonte"
+    },
+    {
+      "pergunta": "O que é 'machine learning'?",
+      "opcoes": [
+        "Um tipo de linguagem de programação",
+        "Um método de otimização de código",
+        "Um ramo da inteligência artificial onde os sistemas aprendem e melhoram a partir de experiências",
+        "Uma técnica de teste de software"
+      ],
+      "resposta_correta": "Um ramo da inteligência artificial onde os sistemas aprendem e melhoram a partir de experiências"
+    },
+    {
+      "pergunta": "O que é 'open source'?",
+      "opcoes": [
+        "Um tipo de linguagem de programação",
+        "Um modelo de desenvolvimento de software em que o código-fonte é disponibilizado publicamente",
+        "Uma técnica de teste de software",
+        "Um método de otimização de código"
+      ],
+      "resposta_correta": "Um modelo de desenvolvimento de software em que o código-fonte é disponibilizado publicamente"
+    },
+    {
+      "pergunta": "O que é um 'container' em desenvolvimento de software?",
+      "opcoes": [
+        "Um tipo de linguagem de programação",
+        "Um ambiente isolado que contém uma aplicação e suas dependências",
+        "Uma técnica de teste de software",
+        "Um modelo de desenvolvimento ágil"
+      ],
+      "resposta_correta": "Um ambiente isolado que contém uma aplicação e suas dependências"
+    },
+    {
+      "pergunta": "Qual é a importância de 'version control' em um projeto de software?",
+      "opcoes": [
+        "Não é importante",
+        "Ajuda a controlar e rastrear alterações no código-fonte",
+        "É apenas uma prática opcional",
+        "Pode ser útil apenas para grandes empresas"
+      ],
+      "resposta_correta": "Ajuda a controlar e rastrear alterações no código-fonte"
+    },
+    {
+      "pergunta": "O que é 'agile' em desenvolvimento de software?",
+      "opcoes": [
+        "Um tipo de linguagem de programação",
+        "Um modelo de desenvolvimento de software que enfatiza a flexibilidade e a colaboração",
+        "Uma técnica de teste de software",
+        "Um método de otimização de código"
+      ],
+      "resposta_correta": "Um modelo de desenvolvimento de software que enfatiza a flexibilidade e a colaboração"
+    },
+    {
+      "pergunta": "O que é 'DevOps'?",
+      "opcoes": [
+        "Um tipo de linguagem de programação",
+        "Um conjunto de práticas que integra o desenvolvimento de software com a operação de sistemas",
+        "Uma técnica de teste de software",
+        "Um modelo de desenvolvimento ágil"
+      ],
+      "resposta_correta": "Um conjunto de práticas que integra o desenvolvimento de software com a operação de sistemas"
+    },
+    {
+      "pergunta": "O que é 'API RESTful'?",
+      "opcoes": [
+        "Um tipo de linguagem de programação",
+        "Um conjunto de diretrizes para projetar APIs que seguem os princípios REST",
+        "Uma técnica de teste de software",
+        "Um modelo de desenvolvimento ágil"
+      ],
+      "resposta_correta": "Um conjunto de diretrizes para projetar APIs que seguem os princípios REST"
+    },
+    {
+      "pergunta": "O que é 'scrum'?",
+      "opcoes": [
+        "Um tipo de linguagem de programação",
+        "Um framework ágil para gestão de projetos",
+        "Uma técnica de teste de software",
+        "Um modelo de desenvolvimento ágil"
+      ],
+      "resposta_correta": "Um framework ágil para gestão de projetos"
+    },
+    {
+      "pergunta": "O que é 'UX design'?",
+      "opcoes": [
+        "Um tipo de linguagem de programação",
+        "User Experience Design, focado na experiência do usuário",
+        "Uma técnica de teste de software",
+        "Um modelo de desenvolvimento ágil"
+      ],
+      "resposta_correta": "User Experience Design, focado na experiência do usuário"
+    },
+    {
+      "pergunta": "O que é 'cloud computing'?",
+      "opcoes": [
+        "Um tipo de linguagem de programação",
+        "Um modelo de fornecimento de serviços de computação pela internet",
+        "Uma técnica de teste de software",
+        "Um modelo de desenvolvimento ágil"
+      ],
+      "resposta_correta": "Um modelo de fornecimento de serviços de computação pela internet"
+    },
+    {
+      "pergunta": "O que é 'hackathon'?",
+      "opcoes": [
+        "Um tipo de linguagem de programação",
+        "Um evento em que programadores colaboram intensivamente em projetos de software",
+        "Uma técnica de teste de software",
+        "Um modelo de desenvolvimento ágil"
+      ],
+      "resposta_correta": "Um evento em que programadores colaboram intensivamente em projetos de software"
+    },
+    {
+      "pergunta": "O que é 'script'?",
+      "opcoes": [
+        "Uma técnica de teste de software",
+        "Um tipo de linguagem de programação",
+        "Um conjunto de instruções que automatiza tarefas",
+        "Um modelo de desenvolvimento ágil"
+      ],
+      "resposta_correta": "Um conjunto de instruções que automatiza tarefas"
+    },
+    {
+      "pergunta": "O que é 'backend as a service' (BaaS)?",
+      "opcoes": [
+        "Um tipo de linguagem de programação",
+        "Um modelo de fornecimento de serviços para o desenvolvimento do lado do servidor",
+        "Uma técnica de teste de software",
+        "Um modelo de desenvolvimento ágil"
+      ],
+      "resposta_correta": "Um modelo de fornecimento de serviços para o desenvolvimento do lado do servidor"
+    },
+    {
+      "pergunta": "O que é 'frontend framework'?",
+      "opcoes": [
+        "Um tipo de linguagem de programação",
+        "Um conjunto de ferramentas e bibliotecas para facilitar o desenvolvimento do lado do cliente",
+        "Uma técnica de teste de software",
+        "Um modelo de desenvolvimento ágil"
+      ],
+      "resposta_correta": "Um conjunto de ferramentas e bibliotecas para facilitar o desenvolvimento do lado do cliente"
+    },
+    {
+      "pergunta": "O que é 'repository' em git?",
+      "opcoes": [
+        "Um tipo de linguagem de programação",
+        "Um local onde o código-fonte é armazenado e gerenciado",
+        "Uma técnica de teste de software",
+        "Um modelo de desenvolvimento ágil"
+      ],
+      "resposta_correta": "Um local onde o código-fonte é armazenado e gerenciado"
+    },
+    {
+      "pergunta": "O que é 'responsive web design'?",
+      "opcoes": [
+        "Um tipo de linguagem de programação",
+        "Um método de design que torna as páginas da web adaptáveis a diferentes dispositivos e tamanhos de tela",
+        "Uma técnica de teste de software",
+        "Um modelo de desenvolvimento ágil"
+      ],
+      "resposta_correta": "Um método de design que torna as páginas da web adaptáveis a diferentes dispositivos e tamanhos de tela"
+    },
+    {
+      "pergunta": "O que é 'agile testing'?",
+      "opcoes": [
+        "Um tipo de linguagem de programação",
+        "Um conjunto de práticas de teste adaptadas a ambientes ágeis",
+        "Uma técnica de teste de software",
+        "Um modelo de desenvolvimento ágil"
+      ],
+      "resposta_correta": "Um conjunto de práticas de teste adaptadas a ambientes ágeis"
+    }
+  ]
+}
