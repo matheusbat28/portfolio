@@ -23,6 +23,7 @@ function App() {
   const [isHoverSF, setIsHoverSF] = useState(false);
   const [isHoverTCS, setIsHoverTCS] = useState(false);
   const [isHoverXP, setIsHoverXP] = useState(false);
+  const [isModalSF, setIsModalSF] = useState(false);
 
   useEffect(() => {
     const darkMode = localStorage.getItem('darkMode');
@@ -45,6 +46,10 @@ function App() {
   const toggleKnowledge = () => {
     setKnowledge(!knowledge);
   };
+
+  const handleModalSF = () => {
+    setIsModalSF(!isModalSF);
+  }
 
   return (
     <div id="home" className="bg-white dark:bg-slate-900 h-screen">
@@ -93,7 +98,7 @@ function App() {
               meus conhecimentos e habilidades na área, sempre em constante evolução.
             </p>
 
-            <div className="md:mt-3 pt-20 md:p-0 md:w-full flex items-center justify-center flex-col md:flex-row gap-4 overflow-auto md:overflow-hidden">
+            <div className="md:mt-3 pt-20 md:p-0 md:w-full flex items-center justify-center flex-col xl:flex-row gap-4 overflow-auto md:overflow-hidden bg-white dark:bg-slate-900">
               <img className=" md:w-7/12" src="https://github-readme-stats.vercel.app/api?username=matheusbat28&show_icons=true&theme=dark&include_all_commits=true&count_private=true" alt="github stats" />
               <img className="md:w-7/12" src="https://github-readme-stats.vercel.app/api/top-langs/?username=matheusbat28&layout=compact&langs_count=7&theme=dark" alt="github languages" />
             </div>
@@ -180,7 +185,7 @@ function App() {
         <div className="h-auto w-full flex justify-center items-center flex-col pt-5 absolute gap-4 bg-white dark:bg-slate-900">
           <h3 className="text-2xl text-gray-700 dark:text-gray-300">Projetos</h3>
           <div className="w-80 md:w-1/2 h-full text-gray-700 dark:text-white grid grid-cols-1 lg:grid-cols-2 gap-4 bg-white dark:bg-slate-900 mb-24 md:mb-0">
-            <div className="flex flex-col items-center justify-center gap-2 h-60 border-slate-900 border-2 dark:border-white shadow-md rounded transition-transform relative" onMouseEnter={() => setIsHoverSF(true)} onMouseLeave={() => setIsHoverSF(false)}>
+            <div className="flex flex-col items-center justify-center gap-2 h-60 border-slate-900 border-2 dark:border-white shadow-md rounded transition-transform relative cursor-pointer" onClick={() => handleModalSF()} onMouseEnter={() => setIsHoverSF(true)} onMouseLeave={() => setIsHoverSF(false)}>
               <img src={sofaLimpo} alt="github" className="w-full h-full absolute top-0" />
               {isHoverSF ? (
                 <img src="https://github-readme-stats.vercel.app/api/pin/?username=matheusbat28&repo=sofa_limpo&theme=dark" alt="github" className="w-full absolute bottom-0 transition-transform" />
@@ -232,6 +237,28 @@ function App() {
         </div>) : null}
         <FaBook className="text-2xl text-gray-700 dark:text-white transform hover:scale-110 transition-transform cursor-pointer" onClick={toggleKnowledge} />
       </div>
+      {isModalSF ? (
+        <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center">
+          <div className="absolute w-full h-full bg-gray-800 opacity-75"></div>
+          <div className="z-50 bg-white dark:bg-slate-900 rounded-lg p-8 max-w-2xl w-full">
+            <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 w-full">
+              Site sofá limpo
+            </h3>
+            <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400 mb-4">
+              <iframe src="https://sofalimpofloripa.com.br/" title="sofa limpo" className="w-full h-96"></iframe>
+            </p>
+            <div className="flex items-center justify-end gap-6">
+              <a href="https://sofalimpofloripa.com.br/" className="text-sm md:text-xl text-gray-700 dark:text-gray-300">https://sofalimpofloripa.com.br/</a>
+              <button
+                onClick={() => handleModalSF()}
+                className="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600"
+              >
+                Fechar
+              </button>
+            </div>
+          </div>
+        </div>
+      ) : null}
     </div>
   );
 }
