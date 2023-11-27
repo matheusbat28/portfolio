@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaGithub, FaLinkedin, FaBook, FaDocker } from "react-icons/fa6";
 import { FaCode, FaArrowAltCircleUp } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
@@ -11,12 +11,18 @@ import { SiPowerbi, SiPowershell } from "react-icons/si";
 import { BiLogoFigma } from "react-icons/bi";
 import { TbBrandMysql } from "react-icons/tb";
 import me from './assets/img/me.png';
+import sofaLimpo from './assets/img/sofaLimpo.png';
+import tcs from './assets/img/tcs.png';
+import xp from './assets/img/xp.png';
 
 function App() {
 
   document.title = 'Matheus batista';
 
   const [knowledge, setKnowledge] = React.useState(false);
+  const [isHoverSF, setIsHoverSF] = useState(false);
+  const [isHoverTCS, setIsHoverTCS] = useState(false);
+  const [isHoverXP, setIsHoverXP] = useState(false);
 
   useEffect(() => {
     const darkMode = localStorage.getItem('darkMode');
@@ -76,7 +82,7 @@ function App() {
         <div className="h-full w-full absolute top-0 left-0 flex justify-center">
           <div className="w-80 md:w-1/2 text-gray-700 dark:text-gray-300 flex items-center flex-col gap-4 pt-5">
             <h3 className="text-2xl  text-center">Sobre mim</h3>
-            <p className="text-left lg:text-justify">
+            <p className="text-left lg:text-justify max-h-80 overflow-auto">
               Desde a infância, minha paixão sempre foi a tecnologia. Meu primeiro contato com essa área foi por meio da
               linguagem de programação Java, uma experiência que despertou meu interesse crescente pelo mundo digital.
               Sempre sonhei em cursar Análise de Desenvolvimento de Sistemas, e em 2020, pude realizar esse sonho estudando
@@ -87,8 +93,8 @@ function App() {
               meus conhecimentos e habilidades na área, sempre em constante evolução.
             </p>
 
-            <div className="md:mt-3 md:w-full flex items-center justify-center flex-col md:flex-row gap-4 overflow-auto md:overflow-hidden">
-              <img className="mt-24 md:mt-0 md:w-7/12" src="https://github-readme-stats.vercel.app/api?username=matheusbat28&show_icons=true&theme=dark&include_all_commits=true&count_private=true" alt="github stats" />
+            <div className="md:mt-3 pt-20 md:p-0 md:w-full flex items-center justify-center flex-col md:flex-row gap-4 overflow-auto md:overflow-hidden">
+              <img className=" md:w-7/12" src="https://github-readme-stats.vercel.app/api?username=matheusbat28&show_icons=true&theme=dark&include_all_commits=true&count_private=true" alt="github stats" />
               <img className="md:w-7/12" src="https://github-readme-stats.vercel.app/api/top-langs/?username=matheusbat28&layout=compact&langs_count=7&theme=dark" alt="github languages" />
             </div>
           </div>
@@ -109,7 +115,7 @@ function App() {
       <section id="training" className="h-full w-full bg-white dark:bg-slate-900 relative">
         <div className="h-auto w-full flex justify-center items-center flex-col pt-5 absolute gap-4">
           <h3 className="text-2xl text-gray-700 dark:text-gray-300">Formação</h3>
-          <div className="w-80 md:w-1/2 h-full text-gray-700 dark:text-white grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="w-80 md:w-1/2 h-full text-gray-700 dark:text-white grid grid-cols-1 md:grid-cols-2 gap-4 overflow-auto">
             <div className="flex flex-col items-center justify-center gap-2 h-56 border-slate-900 border-2 dark:border-white shadow-md rounded transition-transform relative">
               <img src="https://udemy-certificate.s3.amazonaws.com/image/UC-c053ea03-551f-4aea-a307-1134a9c89726.jpg?v=1660151733000" alt="udemy" className="w-full h-full relative" />
               <SiUdemy className="absolute bottom-3 right-3 text-2xl text-cor-udemy transform hover:scale-110 transition-transform" />
@@ -171,8 +177,28 @@ function App() {
         </div>
       </section>
       <section id="code" className="h-full w-full bg-white dark:bg-slate-900 relative">
-        <div className="h-auto w-full flex justify-center items-center flex-col pt-5 absolute gap-4">
+        <div className="h-auto w-full flex justify-center items-center flex-col pt-10 absolute gap-4">
           <h3 className="text-2xl text-gray-700 dark:text-gray-300">Projetos</h3>
+          <div className="w-80 md:w-1/2 h-full text-gray-700 dark:text-white grid grid-cols-1 lg:grid-cols-2 gap-4">
+            <div className="flex flex-col items-center justify-center gap-2 h-60 border-slate-900 border-2 dark:border-white shadow-md rounded transition-transform relative" onMouseEnter={() => setIsHoverSF(true)} onMouseLeave={() => setIsHoverSF(false)}>
+              <img src={sofaLimpo} alt="github" className="w-full h-full absolute top-0" />
+              {isHoverSF ? (
+                <img src="https://github-readme-stats.vercel.app/api/pin/?username=matheusbat28&repo=sofa_limpo&theme=dark" alt="github" className="w-full absolute bottom-0 transition-transform" />
+              ) : null}
+            </div>
+            <div className="flex flex-col items-center justify-center gap-2 h-60 border-slate-900 border-2 dark:border-white shadow-md rounded transition-transform relative" onMouseEnter={() => setIsHoverTCS(true)} onMouseLeave={() => setIsHoverTCS(false)}>
+              <img src={tcs} alt="github" className="w-full h-full absolute top-0" />
+              {isHoverTCS ? (
+                <img src="https://github-readme-stats.vercel.app/api/pin/?username=matheusbat28&repo=tcs&theme=dark" alt="github" className="w-full absolute bottom-0 transition-transform" />
+              ) : null}
+            </div>
+            <div className="flex flex-col items-center justify-center gap-2 h-60 border-slate-900 border-2 dark:border-white shadow-md rounded transition-transform relative" onMouseEnter={() => setIsHoverXP(true)} onMouseLeave={() => setIsHoverXP(false)}>
+              <img src={xp} alt="github" className="w-full h-full absolute top-0" />
+              {isHoverXP ? (
+                <img src="https://github-readme-stats.vercel.app/api/pin/?username=matheusbat28&repo=projetoxpnovo&theme=dark" alt="github" className="w-full absolute bottom-0 transition-transform" />
+              ) : null}
+            </div>
+          </div>
         </div>
       </section>
       <footer className="w-full h-12 fixed bottom-3 sm:hidden flex items-center justify-center">
