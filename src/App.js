@@ -24,7 +24,7 @@ function App() {
   const [knowledge, setKnowledge] = React.useState(false);
   const [isHoverSF, setIsHoverSF] = useState(false);
   const [isHoverTCS, setIsHoverTCS] = useState(false);
-  const [isHoverXP, setIsHoverXP] = useState(false);
+  // const [isHoverXP, setIsHoverXP] = useState(false);
   const [isModalSF, setIsModalSF] = useState(false);
   const [isModalQuiz, setIsModalQuiz] = useState(false);
   const [question, setQuestion] = useState('');
@@ -248,12 +248,12 @@ function App() {
                 <img src="https://github-readme-stats.vercel.app/api/pin/?username=matheusbat28&repo=tcs&theme=dark" alt="github" className="w-full absolute bottom-0 transition-transform" />
               ) : null}
             </div>
-            <div className="flex flex-col items-center justify-center gap-2 h-60 border-slate-900 border-2 dark:border-white shadow-md rounded transition-transform relative" onMouseEnter={() => setIsHoverXP(true)} onMouseLeave={() => setIsHoverXP(false)}>
+            {/* <div className="flex flex-col items-center justify-center gap-2 h-60 border-slate-900 border-2 dark:border-white shadow-md rounded transition-transform relative" onMouseEnter={() => setIsHoverXP(true)} onMouseLeave={() => setIsHoverXP(false)}>
               <img src={xp} alt="github" className="w-full h-full absolute top-0" />
               {isHoverXP ? (
                 <img src="https://github-readme-stats.vercel.app/api/pin/?username=matheusbat28&repo=projetoxpnovo&theme=dark" alt="github" className="w-full absolute bottom-0 transition-transform" />
               ) : null}
-            </div>
+            </div> */}
             <div className="absolute sm:flex gap-3 items-center justify-center flex-col hidden p-4 bg-slate-900 dark:bg-white top-12 right-3 rounded-md shadow-lg text-white dark:text-slate-800">
               <MdQuiz className="text-2xl cursor-pointer" title="jogo de perguntas" onClick={() => handleModalQuiz()} />
             </div>
